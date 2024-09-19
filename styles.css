@@ -1,0 +1,122 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    padding: 20px; /* Adiciona padding para evitar que o conteúdo toque as bordas em dispositivos móveis */
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    max-width: 600px; /* Limita a largura máxima em telas maiores */
+    width: 100%; /* Garante que o container ocupe toda a largura em telas menores */
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.form-image {
+    height: 150px; /* Ajuste a altura conforme necessário */
+    width: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+form input {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%; /* Garante que o botão ocupe toda a largura em telas menores */
+}
+
+form button:hover {
+    background: #0056b3;
+}
+
+ul {
+    list-style: none;
+    margin-top: 20px;
+    width: 100%;
+    padding: 0;
+}
+
+ul li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que o conteúdo seja quebrado em várias linhas em telas menores */
+}
+
+ul li button {
+    background: red;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px; /* Adiciona margem superior para espaçar o botão em telas menores */
+}
+
+ul li button:hover {
+    background: darkred;
+}
+
+/* Media Queries para melhorar a responsividade */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* Ajusta o padding para telas menores */
+    }
+
+    .container {
+        padding: 15px; /* Ajusta o padding interno do container */
+    }
+
+    ul li {
+        flex-direction: column; /* Alinha o conteúdo verticalmente em telas menores */
+        align-items: flex-start; /* Alinha o conteúdo à esquerda em telas menores */
+    }
+
+    ul li button {
+        align-self: flex-end; /* Alinha o botão de remoção à direita em telas menores */
+    }
+}
